@@ -14,9 +14,9 @@ fi
 git pull --rebase origin main || echo "WARNING: pull failed, continuing with local world"
 
 # 2. Write playit config from the Codespace secret, if not already there
-mkdir -p /etc/playit
-if [ -n "${PLAYIT_SECRET_TOML:-}" ] && [ ! -f /etc/playit/playit.toml ]; then
-  echo "$PLAYIT_SECRET_TOML" | sudo tee /etc/playit/playit.toml > /dev/null
+sudo mkdir -p /root/.config/playit_gg
+if [ -n "${PLAYIT_SECRET_TOML:-}" ] && [ ! -f /root/.config/playit_gg/playit.toml ]; then
+  echo "$PLAYIT_SECRET_TOML" | sudo tee /root/.config/playit_gg/playit.toml > /dev/null
 fi
 
 # 3. Start the playit tunnel

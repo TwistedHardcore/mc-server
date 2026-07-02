@@ -1,0 +1,39 @@
+{
+  "stats": {
+    "minecraft:killed": {
+      "minecraft:sheep": 3,
+      "minecraft:pig": 1
+    },
+    "minecraft:picked_up": {
+      "minecraft:porkchop": 2,
+      "minecraft:white_wool": 3,
+      "minecraft:sugar_cane": 11,
+      "minecraft:mutton": 5
+    },
+    "minecraft:mined": {
+      "minecraft:sugar_cane": 7
+    },
+    "minecraft:custom": {
+      "minecraft:time_since_rest": 2032,
+      "minecraft:walk_one_cm": 1912,
+      "minecraft:leave_game": 1,
+      "minecraft:mob_kills": 4,
+      "minecraft:damage_taken": 30,
+      "minecraft:play_time": 2032,
+      "minecraft:damage_dealt": 340,
+      "minecraft:jump": 71,
+      "minecraft:time_since_death": 2032,
+      "minecraft:sprint_one_cm": 6767,
+      "minecraft:fall_one_cm": 1300,
+      "minecraft:total_world_time": 2032,
+      "minecraft:fly_one_cm": 8175,
+      "minecraft:walk_on_water_one_cm": 405,
+      "minecraft:climb_one_cm": 226
+    },
+    "minecraft:used": {
+      "minecraft:porkchop": 2,
+      "minecraft:sugar_cane": 11
+    }
+  },
+  "DataVersion": 4903
+}

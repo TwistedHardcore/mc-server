@@ -18,7 +18,7 @@ set -u
 
 # --- tools the rest of the system needs ---
 sudo apt-get update -y
-sudo apt-get install -y python3 tmux jq
+sudo apt-get install -y python3 tmux jq git-lfs
 
 # --- playit.gg (official apt repo, matches the daemon path we rely on) ---
 curl -SsL https://playit-cloud.github.io/ppa/key.gpg | sudo tee /etc/apt/trusted.gpg.d/playit.asc

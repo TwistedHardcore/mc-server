@@ -37,4 +37,5 @@ if [ -n "${GH_TOKEN:-}" ] && [ -n "${CODESPACE_NAME:-}" ]; then
   done
 fi
 # Actually launch the Minecraft server + watcher + autopush
-bash "$REPO_DIR/scripts/start.sh" >> "$LOG" 2>&1 &
+nohup bash "$REPO_DIR/scripts/start.sh" >> "$LOG" 2>&1 &
+disown

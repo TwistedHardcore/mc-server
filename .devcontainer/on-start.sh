@@ -17,9 +17,8 @@ if ! pgrep -f "scripts/listener.py" > /dev/null; then
 fi
 
 # Make the listener's port public so the Worker can reach it
-if [ -n "${GH_TOKEN:-}" ] && [ -n "${GH_CODESPACE_NAME:-}" ]; then
-  GH_TOKEN="$GH_TOKEN" gh codespace ports visibility 8787:public -c "$GH_CODESPACE_NAME" >> "$LOG" 2>&1 || true
+if [ -n "${GH_TOKEN:-}" ] && [ -n "${CODESPACE_NAME:-}" ]; then
+  GH_TOKEN="$GH_TOKEN" gh codespace ports visibility 8787:public -c "$CODESPACE_NAME" >> "$LOG" 2>&1 || true
 fi
-
 # Actually launch the Minecraft server + watcher + autopush
 bash "$REPO_DIR/scripts/start.sh" >> "$LOG" 2>&1 &

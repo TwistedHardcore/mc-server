@@ -33,6 +33,6 @@ pkill -f playitd 2>/dev/null || true
 echo "[$(date -u)] stop.sh complete"
 
 # 5. Stop the Codespace itself
-if [ -n "${GH_TOKEN:-}" ] && [ -n "${GH_CODESPACE_NAME:-}" ]; then
-  GH_TOKEN="$GH_TOKEN" gh codespace stop -c "$GH_CODESPACE_NAME" || true
+if [ -n "${GH_TOKEN:-}" ] && [ -n "${CODESPACE_NAME:-}" ]; then
+  GH_TOKEN="$GH_TOKEN" gh codespace stop -c "$CODESPACE_NAME" || true
 fi

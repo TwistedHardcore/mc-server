@@ -5,20 +5,20 @@
     },
     "minecraft:custom": {
       "minecraft:interact_with_crafting_table": 3,
-      "minecraft:time_since_rest": 9530,
-      "minecraft:walk_one_cm": 8262,
-      "minecraft:leave_game": 4,
-      "minecraft:mob_kills": 8,
+      "minecraft:time_since_rest": 9725,
+      "minecraft:walk_one_cm": 8648,
+      "minecraft:leave_game": 5,
+      "minecraft:mob_kills": 9,
       "minecraft:damage_taken": 70,
-      "minecraft:play_time": 9530,
-      "minecraft:damage_dealt": 540,
-      "minecraft:jump": 214,
-      "minecraft:time_since_death": 9530,
+      "minecraft:play_time": 9725,
+      "minecraft:damage_dealt": 620,
+      "minecraft:jump": 216,
+      "minecraft:time_since_death": 9725,
       "minecraft:drop": 6,
-      "minecraft:sprint_one_cm": 30198,
+      "minecraft:sprint_one_cm": 30555,
       "minecraft:fall_one_cm": 3752,
-      "minecraft:total_world_time": 9530,
-      "minecraft:fly_one_cm": 37629,
+      "minecraft:total_world_time": 9725,
+      "minecraft:fly_one_cm": 37790,
       "minecraft:walk_on_water_one_cm": 4076,
       "minecraft:crouch_one_cm": 1254,
       "minecraft:sneak_time": 856,
@@ -29,7 +29,7 @@
       "minecraft:dirt": 6,
       "minecraft:stick": 9,
       "minecraft:cobblestone": 11,
-      "minecraft:white_wool": 4,
+      "minecraft:white_wool": 5,
       "minecraft:feather": 6,
       "minecraft:chicken": 3,
       "minecraft:sugar_cane": 11,
@@ -38,7 +38,7 @@
       "minecraft:oak_log": 24,
       "minecraft:firefly_bush": 1,
       "minecraft:sand": 10,
-      "minecraft:mutton": 6
+      "minecraft:mutton": 7
     },
     "minecraft:mined": {
       "minecraft:short_grass": 4,
@@ -57,10 +57,10 @@
     "minecraft:killed": {
       "minecraft:chicken": 3,
       "minecraft:pig": 1,
-      "minecraft:sheep": 4
+      "minecraft:sheep": 5
     },
     "minecraft:used": {
-      "minecraft:stone_axe": 29,
+      "minecraft:stone_axe": 30,
       "minecraft:sand": 2,
       "minecraft:crafting_table": 1,
       "minecraft:wooden_pickaxe": 17,

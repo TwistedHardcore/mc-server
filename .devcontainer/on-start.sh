@@ -17,15 +17,22 @@ if ! pgrep -f "scripts/listener.py" > /dev/null; then
 fi
 
 # Make the listener's port public so the Worker can reach it.
-# The port-forwarding service needs a moment to register the port
-# after the listener starts, so retry a few times.
+# Codespaces' auto port-detection can take a while to notice the
+# listener is up, so first wait for the port to actually appear in
+# `gh codespace ports` before trying to change its visibility.
 if [ -n "${GH_TOKEN:-}" ] && [ -n "${CODESPACE_NAME:-}" ]; then
+  for attempt in $(seq 1 20); do
+    if GH_TOKEN="$GH_TOKEN" gh codespace ports -c "$CODESPACE_NAME" 2>>"$LOG" | grep -q "8787"; then
+      echo "[$(date -u)] port 8787 detected after $attempt check(s)" >> "$LOG"
+      break
+    fi
+    sleep 5
+  done
   for attempt in 1 2 3 4 5; do
     if GH_TOKEN="$GH_TOKEN" gh codespace ports visibility 8787:public -c "$CODESPACE_NAME" >> "$LOG" 2>&1; then
       echo "[$(date -u)] port 8787 set to public on attempt $attempt" >> "$LOG"
       break
     fi
-    echo "[$(date -u)] port visibility attempt $attempt failed, retrying in 5s" >> "$LOG"
     sleep 5
   done
 fi
